@@ -863,6 +863,7 @@ _sections_unfolded = [ "Anchor", "Grow Direction", "Rect", "Size Flags", "custom
 
 [node name="Ranking" type="Node2D" parent="." index="0"]
 
+editor/display_folded = true
 script = ExtResource( 2 )
 
 [node name="Rank1" parent="Ranking" index="0" instance=ExtResource( 3 )]
@@ -958,7 +959,6 @@ script = ExtResource( 7 )
 
 [node name="Players" type="Node" parent="." index="6"]
 
-editor/display_folded = true
 script = ExtResource( 8 )
 
 [node name="AIManager1" type="Node" parent="Players" index="0"]

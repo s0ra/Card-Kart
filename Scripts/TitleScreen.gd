@@ -7,8 +7,7 @@ extends Node2D
 var playing = false
 
 func _ready():
-	# Called every time the node is added to the scene.
-	# Initialization here
+	get_tree().set_screen_stretch(SceneTree.STRETCH_MODE_2D, SceneTree.STRETCH_ASPECT_KEEP, Vector2(400, 640))
 	pass
 
 func _process(delta):

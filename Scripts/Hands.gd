@@ -62,6 +62,7 @@ func _process(delta):
 		game.get_node("PlayCard").visible = true
 		game.get_node("Pass").hide()
 	if your_turn and not playing:
+		game.get_node("Discard").hide()
 		game.get_node("Pass").show()
 		game.get_node("PlayCard").visible = false
 		for hand in get_children():
@@ -69,6 +70,7 @@ func _process(delta):
 	elif not your_turn:
 		for hand in get_children():
 			hand.modulate = Color(1, 1, 1, 0.5)
+			game.get_node("Discard").show()
 	if discarded or played:
 		can_end = true
 	pass
