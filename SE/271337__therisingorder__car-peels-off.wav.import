@@ -1,0 +1,24 @@
+[remap]
+
+importer="wav"
+type="AudioStreamSample"
+path="res://.import/271337__therisingorder__car-peels-off.wav-2aff4d6245778a72714b5e35f0ed9351.sample"
+
+[deps]
+
+source_file="res://SE/271337__therisingorder__car-peels-off.wav"
+source_md5="18045c8e76464fbdec05a097dcd65e6b"
+
+dest_files=[ "res://.import/271337__therisingorder__car-peels-off.wav-2aff4d6245778a72714b5e35f0ed9351.sample" ]
+dest_md5="48355b3b84f11d0fb4fba52954241c86"
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=true
+edit/normalize=true
+edit/loop=false
+compress/mode=0

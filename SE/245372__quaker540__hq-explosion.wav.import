@@ -1,0 +1,24 @@
+[remap]
+
+importer="wav"
+type="AudioStreamSample"
+path="res://.import/245372__quaker540__hq-explosion.wav-af993d4657f8fc504db869cce64c4351.sample"
+
+[deps]
+
+source_file="res://SE/245372__quaker540__hq-explosion.wav"
+source_md5="f44150f6644bbce4537f16c454ca1710"
+
+dest_files=[ "res://.import/245372__quaker540__hq-explosion.wav-af993d4657f8fc504db869cce64c4351.sample" ]
+dest_md5="29f3d128b3cd2688bffcccfd67003524"
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=true
+edit/normalize=true
+edit/loop=false
+compress/mode=0

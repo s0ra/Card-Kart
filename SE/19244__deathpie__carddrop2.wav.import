@@ -1,0 +1,24 @@
+[remap]
+
+importer="wav"
+type="AudioStreamSample"
+path="res://.import/19244__deathpie__carddrop2.wav-d364f2331ba754726247b13ceacc00b6.sample"
+
+[deps]
+
+source_file="res://SE/19244__deathpie__carddrop2.wav"
+source_md5="5cd371c1d97b9f7725a01291079f53bf"
+
+dest_files=[ "res://.import/19244__deathpie__carddrop2.wav-d364f2331ba754726247b13ceacc00b6.sample" ]
+dest_md5="d2fa3a7f739aa55aebf81dd4439a5f8b"
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=true
+edit/normalize=true
+edit/loop=false
+compress/mode=0

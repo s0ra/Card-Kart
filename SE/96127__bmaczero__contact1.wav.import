@@ -1,0 +1,24 @@
+[remap]
+
+importer="wav"
+type="AudioStreamSample"
+path="res://.import/96127__bmaczero__contact1.wav-a17cf2913be0c0e1190f01677ef18578.sample"
+
+[deps]
+
+source_file="res://SE/96127__bmaczero__contact1.wav"
+source_md5="4cefd77e5c2cf8940da6e92500c29777"
+
+dest_files=[ "res://.import/96127__bmaczero__contact1.wav-a17cf2913be0c0e1190f01677ef18578.sample" ]
+dest_md5="5331d832340069ab9df3999ff5c4dc8d"
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=true
+edit/normalize=true
+edit/loop=false
+compress/mode=0

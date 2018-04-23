@@ -1,0 +1,24 @@
+[remap]
+
+importer="wav"
+type="AudioStreamSample"
+path="res://.import/339137__ffkoenigsegg20012017__v8-supercar-acceleration.wav-ebb83a702bd0a3fe2482cfe72898d60f.sample"
+
+[deps]
+
+source_file="res://SE/339137__ffkoenigsegg20012017__v8-supercar-acceleration.wav"
+source_md5="0c74cddc3fa39f0649536a5a8537cd0c"
+
+dest_files=[ "res://.import/339137__ffkoenigsegg20012017__v8-supercar-acceleration.wav-ebb83a702bd0a3fe2482cfe72898d60f.sample" ]
+dest_md5="fbec9f53532a6b8ec37a5a7f8f0fac6c"
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=true
+edit/normalize=true
+edit/loop=false
+compress/mode=0
