@@ -265,6 +265,7 @@ func congra():
 			get_parent().get_node("WinnerIs").text = "The Winner is CP"+str(winner+1)
 			get_parent().get_node("WinnerIs").show()
 		get_tree().paused = true
+		parent.get_node("Popup").show()
 		print("The winner is p" + str(ranking.get_node("Rank1").get_data().player_id+1) + ".")
 #		get_tree().get_root().set_pause(true)
 

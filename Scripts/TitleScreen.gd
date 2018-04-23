@@ -12,7 +12,6 @@ func _ready():
 	pass
 
 func _process(delta):
-	
 	if Input.is_action_just_pressed("start"):
 		playing = true
 		get_node("Hands/Start").modulate = Color(1, 1, 1, 0.3)

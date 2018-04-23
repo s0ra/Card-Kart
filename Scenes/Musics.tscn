@@ -1,0 +1,14 @@
+[gd_scene load_steps=2 format=2]
+
+[ext_resource path="res://Music/324923__lionhart151__exploration.wav" type="AudioStream" id=1]
+
+
+[node name="Musics" type="AudioStreamPlayer"]
+
+stream = ExtResource( 1 )
+volume_db = -5.0
+autoplay = true
+mix_target = 0
+bus = "Music"
+
+

@@ -16,7 +16,8 @@ config/icon="res://Sprites/driver - Copy.png"
 
 [autoload]
 
-Item="*res://Item.gd"
+Item="*res://Scripts/Item.gd"
+Music="*res://Scripts/Music.gd"
 
 [display]
 

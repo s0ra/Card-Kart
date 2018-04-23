@@ -1,4 +1,4 @@
-[gd_scene load_steps=57 format=2]
+[gd_scene load_steps=59 format=2]
 
 [ext_resource path="res://Scripts/Game.gd" type="Script" id=1]
 [ext_resource path="res://Scripts/Ranking.gd" type="Script" id=2]
@@ -28,8 +28,8 @@
 [ext_resource path="res://Sprites/explode_6.png" type="Texture" id=26]
 [ext_resource path="res://Sprites/explode_7.png" type="Texture" id=27]
 [ext_resource path="res://Sprites/explode_8.png" type="Texture" id=28]
-
-
+[ext_resource path="res://Music/324923__lionhart151__exploration.wav" type="AudioStream" id=29]
+[ext_resource path="res://Scripts/Popup.gd" type="Script" id=30]
 
 [sub_resource type="DynamicFont" id=1]
 
@@ -451,7 +451,7 @@ tracks/0/keys = {
 "values": [ true, false ]
 }
 
-[sub_resource type="Animation" id=28]
+[sub_resource type="Animation" id=13]
 
 resource_name = "NoTurbo"
 length = 1.0
@@ -482,7 +482,7 @@ tracks/1/keys = {
 "values": [ Vector2( 40, 180 ), Vector2( 40, 155 ) ]
 }
 
-[sub_resource type="Animation" id=13]
+[sub_resource type="Animation" id=14]
 
 length = 1.3
 loop = false
@@ -500,7 +500,7 @@ tracks/0/keys = {
 "values": [ true, false ]
 }
 
-[sub_resource type="Animation" id=14]
+[sub_resource type="Animation" id=15]
 
 length = 1.0
 loop = false
@@ -517,7 +517,7 @@ tracks/0/keys = {
 "values": [  ]
 }
 
-[sub_resource type="Animation" id=15]
+[sub_resource type="Animation" id=16]
 
 length = 0.6
 loop = false
@@ -547,7 +547,7 @@ tracks/1/keys = {
 "values": [ Color( 1, 1, 1, 1 ), Color( 1, 1, 1, 0 ) ]
 }
 
-[sub_resource type="Animation" id=16]
+[sub_resource type="Animation" id=17]
 
 length = 0.6
 loop = false
@@ -577,7 +577,7 @@ tracks/1/keys = {
 "values": [ Color( 1, 1, 1, 1 ), Color( 1, 1, 1, 0 ) ]
 }
 
-[sub_resource type="Animation" id=17]
+[sub_resource type="Animation" id=18]
 
 length = 0.6
 loop = false
@@ -607,7 +607,7 @@ tracks/1/keys = {
 "values": [ Color( 1, 1, 1, 1 ), Color( 1, 1, 1, 0 ) ]
 }
 
-[sub_resource type="Animation" id=18]
+[sub_resource type="Animation" id=19]
 
 length = 0.6
 loop = false
@@ -637,7 +637,7 @@ tracks/1/keys = {
 "values": [ Color( 1, 1, 1, 1 ), Color( 1, 1, 1, 0 ) ]
 }
 
-[sub_resource type="Animation" id=19]
+[sub_resource type="Animation" id=20]
 
 length = 3.0
 loop = false
@@ -657,9 +657,8 @@ tracks/0/keys = {
 } ]
 }
 
-[sub_resource type="Animation" id=20]
+[sub_resource type="Animation" id=21]
 
-resource_name = "explode"
 length = 0.6
 loop = false
 step = 0.1
@@ -712,7 +711,7 @@ tracks/3/keys = {
 "values": [ true, false ]
 }
 
-[sub_resource type="Animation" id=21]
+[sub_resource type="Animation" id=22]
 
 length = 0.6
 loop = false
@@ -742,7 +741,7 @@ tracks/1/keys = {
 "values": [ Color( 1, 1, 1, 1 ), Color( 1, 1, 1, 0 ) ]
 }
 
-[sub_resource type="Animation" id=22]
+[sub_resource type="Animation" id=23]
 
 length = 0.6
 loop = false
@@ -772,7 +771,7 @@ tracks/1/keys = {
 "values": [ Color( 1, 1, 1, 1 ), Color( 1, 1, 1, 0 ) ]
 }
 
-[sub_resource type="Animation" id=23]
+[sub_resource type="Animation" id=24]
 
 length = 0.6
 loop = false
@@ -802,7 +801,7 @@ tracks/1/keys = {
 "values": [ Color( 1, 1, 1, 1 ), Color( 1, 1, 1, 0 ) ]
 }
 
-[sub_resource type="Animation" id=24]
+[sub_resource type="Animation" id=25]
 
 length = 0.6
 loop = false
@@ -832,7 +831,7 @@ tracks/1/keys = {
 "values": [ Color( 1, 1, 1, 1 ), Color( 1, 1, 1, 0 ) ]
 }
 
-[sub_resource type="SpriteFrames" id=25]
+[sub_resource type="SpriteFrames" id=26]
 
 animations = [ {
 "frames": [ ExtResource( 20 ), ExtResource( 21 ), ExtResource( 22 ), ExtResource( 23 ), ExtResource( 24 ), ExtResource( 25 ), ExtResource( 26 ), ExtResource( 27 ), ExtResource( 28 ) ],
@@ -841,7 +840,7 @@ animations = [ {
 "speed": 20.0
 } ]
 
-[sub_resource type="DynamicFont" id=26]
+[sub_resource type="DynamicFont" id=27]
 
 size = 40
 use_mipmaps = false
@@ -849,7 +848,7 @@ use_filter = false
 font_data = ExtResource( 4 )
 _sections_unfolded = [ "Font", "Settings" ]
 
-[sub_resource type="DynamicFont" id=27]
+[sub_resource type="DynamicFont" id=28]
 
 size = 30
 use_mipmaps = false
@@ -864,7 +863,6 @@ _sections_unfolded = [ "Anchor", "Grow Direction", "Rect", "Size Flags", "custom
 
 [node name="Ranking" type="Node2D" parent="." index="0"]
 
-editor/display_folded = true
 script = ExtResource( 2 )
 
 [node name="Rank1" parent="Ranking" index="0" instance=ExtResource( 3 )]
@@ -960,6 +958,7 @@ script = ExtResource( 7 )
 
 [node name="Players" type="Node" parent="." index="6"]
 
+editor/display_folded = true
 script = ExtResource( 8 )
 
 [node name="AIManager1" type="Node" parent="Players" index="0"]
@@ -972,6 +971,7 @@ script = ExtResource( 9 )
 
 [node name="Hands" type="Node2D" parent="Players" index="2"]
 
+editor/display_folded = true
 position = Vector2( 60, 500 )
 script = ExtResource( 10 )
 _sections_unfolded = [ "Transform", "Z Index" ]
@@ -1006,15 +1006,13 @@ script = ExtResource( 13 )
 
 [node name="SE" type="Node" parent="." index="9"]
 
-editor/display_folded = true
-
 [node name="DiscardSound" type="AudioStreamPlayer" parent="SE" index="0"]
 
 stream = ExtResource( 14 )
 volume_db = -20.0
 autoplay = false
 mix_target = 0
-bus = "Master"
+bus = "SE"
 
 [node name="PlaySound" type="AudioStreamPlayer" parent="SE" index="1"]
 
@@ -1022,7 +1020,7 @@ stream = ExtResource( 15 )
 volume_db = 0.0
 autoplay = false
 mix_target = 0
-bus = "Master"
+bus = "SE"
 
 [node name="DrawSound" type="AudioStreamPlayer" parent="SE" index="2"]
 
@@ -1030,7 +1028,7 @@ stream = ExtResource( 16 )
 volume_db = -10.0
 autoplay = false
 mix_target = 0
-bus = "Master"
+bus = "SE"
 
 [node name="BrakeSound" type="AudioStreamPlayer" parent="SE" index="3"]
 
@@ -1038,7 +1036,7 @@ stream = ExtResource( 17 )
 volume_db = -5.0
 autoplay = false
 mix_target = 0
-bus = "Master"
+bus = "SE"
 
 [node name="ExplodeSound" type="AudioStreamPlayer" parent="SE" index="4"]
 
@@ -1046,7 +1044,7 @@ stream = ExtResource( 18 )
 volume_db = -10.0
 autoplay = false
 mix_target = 0
-bus = "Master"
+bus = "SE"
 
 [node name="Diff" type="Label" parent="." index="10"]
 
@@ -1108,19 +1106,19 @@ playback_process_mode = 1
 playback_default_blend_time = 0.0
 playback_speed = 1.0
 anims/Draw = SubResource( 12 )
-anims/NoTurbo = SubResource( 28 )
-anims/OL = SubResource( 13 )
-anims/ShowItem = SubResource( 14 )
-anims/change_1 = SubResource( 15 )
-anims/change_2 = SubResource( 16 )
-anims/change_3 = SubResource( 17 )
-anims/change_4 = SubResource( 18 )
-anims/end_all = SubResource( 19 )
-anims/explode = SubResource( 20 )
-anims/turbo_1 = SubResource( 21 )
-anims/turbo_2 = SubResource( 22 )
-anims/turbo_3 = SubResource( 23 )
-anims/turbo_4 = SubResource( 24 )
+anims/NoTurbo = SubResource( 13 )
+anims/OL = SubResource( 14 )
+anims/ShowItem = SubResource( 15 )
+anims/change_1 = SubResource( 16 )
+anims/change_2 = SubResource( 17 )
+anims/change_3 = SubResource( 18 )
+anims/change_4 = SubResource( 19 )
+anims/end_all = SubResource( 20 )
+anims/explode = SubResource( 21 )
+anims/turbo_1 = SubResource( 22 )
+anims/turbo_2 = SubResource( 23 )
+anims/turbo_3 = SubResource( 24 )
+anims/turbo_4 = SubResource( 25 )
 blend_times = [  ]
 
 [node name="AnimatedSprite" type="AnimatedSprite" parent="." index="14"]
@@ -1128,7 +1126,7 @@ blend_times = [  ]
 visible = false
 position = Vector2( 90, 30 )
 scale = Vector2( 0.5, 0.5 )
-frames = SubResource( 25 )
+frames = SubResource( 26 )
 animation = "explode"
 _sections_unfolded = [ "Transform", "Visibility" ]
 
@@ -1149,7 +1147,7 @@ mouse_filter = 2
 mouse_default_cursor_shape = 0
 size_flags_horizontal = 1
 size_flags_vertical = 4
-custom_fonts/font = SubResource( 26 )
+custom_fonts/font = SubResource( 27 )
 custom_colors/font_color = Color( 0, 0, 0, 1 )
 text = "The Winner is You"
 percent_visible = 1.0
@@ -1174,7 +1172,7 @@ mouse_filter = 2
 mouse_default_cursor_shape = 0
 size_flags_horizontal = 1
 size_flags_vertical = 4
-custom_fonts/font = SubResource( 27 )
+custom_fonts/font = SubResource( 28 )
 custom_colors/font_color = Color( 0.366398, 0.0969696, 0.800781, 1 )
 custom_colors/font_color_shadow = Color( 1, 1, 1, 1 )
 text = "Not Enough Turbo..."
@@ -1183,6 +1181,110 @@ lines_skipped = 0
 max_lines_visible = -1
 _sections_unfolded = [ "Rect", "Visibility", "custom_colors", "custom_fonts" ]
 
+[node name="Music" type="AudioStreamPlayer" parent="." index="17"]
+
+stream = ExtResource( 29 )
+volume_db = -10.0
+autoplay = true
+mix_target = 0
+bus = "Music"
+
+[node name="Popup" type="Popup" parent="." index="18"]
+
+pause_mode = 2
+visible = false
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_left = 120.0
+margin_top = 280.0
+margin_right = 160.0
+margin_bottom = 320.0
+rect_pivot_offset = Vector2( 0, 0 )
+rect_clip_content = false
+mouse_filter = 0
+mouse_default_cursor_shape = 0
+size_flags_horizontal = 1
+size_flags_vertical = 1
+popup_exclusive = false
+script = ExtResource( 30 )
+_sections_unfolded = [ "Pause" ]
+
+[node name="Panel" type="Panel" parent="Popup" index="0"]
+
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_right = 150.0
+margin_bottom = 120.0
+rect_pivot_offset = Vector2( 0, 0 )
+rect_clip_content = false
+mouse_filter = 0
+mouse_default_cursor_shape = 0
+size_flags_horizontal = 1
+size_flags_vertical = 1
+_sections_unfolded = [ "Rect" ]
+__meta__ = {
+"_edit_lock_": true
+}
+
+[node name="MenuButton" type="MenuButton" parent="Popup/Panel" index="0"]
+
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_left = 30.0
+margin_top = 30.0
+margin_right = 117.0
+margin_bottom = 50.0
+rect_pivot_offset = Vector2( 0, 0 )
+rect_clip_content = false
+mouse_filter = 0
+mouse_default_cursor_shape = 0
+size_flags_horizontal = 1
+size_flags_vertical = 1
+toggle_mode = false
+action_mode = 0
+enabled_focus_mode = 0
+shortcut = null
+group = null
+text = "Play Again"
+flat = true
+align = 1
+items = [  ]
+
+[node name="MenuButton2" type="MenuButton" parent="Popup/Panel" index="1"]
+
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_top = 70.0
+margin_right = 150.0
+margin_bottom = 90.0
+rect_pivot_offset = Vector2( 0, 0 )
+rect_clip_content = false
+mouse_filter = 0
+mouse_default_cursor_shape = 0
+size_flags_horizontal = 1
+size_flags_vertical = 1
+toggle_mode = false
+action_mode = 0
+enabled_focus_mode = 0
+shortcut = null
+group = null
+text = "Return to Title Screen"
+flat = true
+align = 1
+items = [  ]
+
 [connection signal="animation_finished" from="RankAnimation" to="RankAnimation" method="_on_RankAnimation_animation_finished"]
+
+[connection signal="pressed" from="Popup/Panel/MenuButton" to="Popup" method="_on_MenuButton_pressed"]
+
+[connection signal="pressed" from="Popup/Panel/MenuButton2" to="Popup" method="_on_MenuButton2_pressed"]
 
 

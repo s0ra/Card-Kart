@@ -1,4 +1,4 @@
-[gd_scene load_steps=23 format=2]
+[gd_scene load_steps=26 format=2]
 
 [ext_resource path="res://Scripts/TitleScreen.gd" type="Script" id=1]
 [ext_resource path="res://Sprites/hand.png" type="Texture" id=2]
@@ -9,8 +9,10 @@
 [ext_resource path="res://Sprites/title.png" type="Texture" id=7]
 [ext_resource path="res://Sprites/this.png" type="Texture" id=8]
 [ext_resource path="res://Sprites/driver.png" type="Texture" id=9]
-[ext_resource path="res://SE/339137__ffkoenigsegg20012017__v8-supercar-acceleration.wav" type="AudioStream" id=10]
-[ext_resource path="res://Scenes/PlayCard.tscn" type="PackedScene" id=11]
+[ext_resource path="res://Scripts/Setting.gd" type="Script" id=10]
+[ext_resource path="res://SE/339137__ffkoenigsegg20012017__v8-supercar-acceleration.wav" type="AudioStream" id=11]
+[ext_resource path="res://Scenes/PlayCard.tscn" type="PackedScene" id=12]
+[ext_resource path="res://Scenes/Musics.tscn" type="PackedScene" id=13]
 
 [sub_resource type="RectangleShape2D" id=1]
 
@@ -66,7 +68,7 @@ _sections_unfolded = [ "Font", "Settings" ]
 
 [sub_resource type="DynamicFont" id=9]
 
-size = 25
+size = 26
 use_mipmaps = false
 use_filter = false
 font_data = ExtResource( 4 )
@@ -83,6 +85,14 @@ _sections_unfolded = [ "Extra Spacing", "Font", "Settings" ]
 [sub_resource type="DynamicFont" id=11]
 
 size = 26
+use_mipmaps = false
+use_filter = false
+font_data = ExtResource( 4 )
+_sections_unfolded = [ "Font", "Settings" ]
+
+[sub_resource type="DynamicFont" id=12]
+
+size = 32
 use_mipmaps = false
 use_filter = false
 font_data = ExtResource( 4 )
@@ -155,7 +165,7 @@ _sections_unfolded = [ "Transform" ]
 
 [node name="Sprite" type="Sprite" parent="Hands/Setting" index="0"]
 
-position = Vector2( 0, 20 )
+position = Vector2( 4.88702, 17.5565 )
 texture = ExtResource( 5 )
 
 [node name="TouchScreenButton" type="TouchScreenButton" parent="Hands/Setting" index="1"]
@@ -297,9 +307,9 @@ anchor_left = 0.0
 anchor_top = 0.0
 anchor_right = 0.0
 anchor_bottom = 0.0
-margin_left = 20.0
+margin_left = 10.0
 margin_top = 600.0
-margin_right = 440.0
+margin_right = 430.0
 margin_bottom = 640.0
 rect_pivot_offset = Vector2( 0, 0 )
 rect_clip_content = false
@@ -353,10 +363,10 @@ anchor_left = 0.0
 anchor_top = 0.0
 anchor_right = 0.0
 anchor_bottom = 0.0
-margin_left = -134.0
-margin_top = 126.0
-margin_right = 137.0
-margin_bottom = 156.0
+margin_left = -133.0
+margin_top = 125.0
+margin_right = 138.0
+margin_bottom = 155.0
 rect_pivot_offset = Vector2( 0, 0 )
 rect_clip_content = false
 mouse_filter = 2
@@ -386,35 +396,200 @@ _sections_unfolded = [ "Transform" ]
 
 [node name="Setting" type="Sprite" parent="." index="3"]
 
+editor/display_folded = true
 visible = false
-position = Vector2( 204, 194 )
+position = Vector2( 200, 190 )
 texture = ExtResource( 7 )
+script = ExtResource( 10 )
 _sections_unfolded = [ "Transform" ]
+
+[node name="CheckBox" type="CheckBox" parent="Setting" index="0"]
+
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_left = 60.0
+margin_top = -110.0
+margin_right = 90.0
+margin_bottom = -80.0
+rect_pivot_offset = Vector2( 0, 0 )
+rect_clip_content = false
+focus_mode = 2
+mouse_filter = 0
+mouse_default_cursor_shape = 0
+size_flags_horizontal = 1
+size_flags_vertical = 1
+toggle_mode = true
+pressed = true
+action_mode = 0
+enabled_focus_mode = 2
+shortcut = null
+group = null
+flat = false
+align = 0
+
+[node name="CheckBox2" type="CheckBox" parent="Setting" index="1"]
+
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_left = 60.0
+margin_top = 40.0
+margin_right = 90.0
+margin_bottom = 70.0
+rect_pivot_offset = Vector2( 0, 0 )
+rect_clip_content = false
+focus_mode = 2
+mouse_filter = 0
+mouse_default_cursor_shape = 0
+size_flags_horizontal = 1
+size_flags_vertical = 1
+toggle_mode = true
+pressed = true
+enabled_focus_mode = 2
+shortcut = null
+group = null
+flat = false
+align = 0
+
+[node name="Label2" type="Label" parent="Setting" index="2"]
+
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_left = -90.0
+margin_top = -110.0
+margin_right = 60.0
+margin_bottom = -70.0
+rect_pivot_offset = Vector2( 0, 0 )
+rect_clip_content = false
+mouse_filter = 2
+mouse_default_cursor_shape = 0
+size_flags_horizontal = 1
+size_flags_vertical = 4
+custom_fonts/font = SubResource( 9 )
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+text = "Music On"
+percent_visible = 1.0
+lines_skipped = 0
+max_lines_visible = -1
+_sections_unfolded = [ "custom_colors", "custom_fonts" ]
+
+[node name="Label3" type="Label" parent="Setting" index="3"]
+
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_left = -40.0
+margin_top = 40.0
+margin_right = 51.0
+margin_bottom = 80.0
+rect_pivot_offset = Vector2( 0, 0 )
+rect_clip_content = false
+mouse_filter = 2
+mouse_default_cursor_shape = 0
+size_flags_horizontal = 1
+size_flags_vertical = 4
+custom_fonts/font = SubResource( 9 )
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+text = "SE On"
+percent_visible = 1.0
+lines_skipped = 0
+max_lines_visible = -1
+_sections_unfolded = [ "custom_colors", "custom_fonts" ]
 
 [node name="Tutorial" type="Sprite" parent="." index="4"]
 
+editor/display_folded = true
 visible = false
-position = Vector2( 204, 194 )
+position = Vector2( 200, 190 )
 texture = ExtResource( 7 )
 _sections_unfolded = [ "Transform" ]
+
+[node name="Label" type="Label" parent="Tutorial" index="0"]
+
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_left = -120.0
+margin_top = -120.0
+margin_right = 150.0
+margin_bottom = 160.0
+rect_pivot_offset = Vector2( 0, 0 )
+rect_clip_content = false
+mouse_filter = 2
+mouse_default_cursor_shape = 0
+size_flags_horizontal = 1
+size_flags_vertical = 4
+custom_fonts/font = SubResource( 12 )
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+text = "You can play one card for each turn, and discard card to gain one speed."
+autowrap = true
+percent_visible = 1.0
+lines_skipped = 0
+max_lines_visible = -1
+_sections_unfolded = [ "custom_fonts" ]
 
 [node name="Credits" type="Sprite" parent="." index="5"]
 
+editor/display_folded = true
 visible = false
-position = Vector2( 204, 194 )
+position = Vector2( 200, 190 )
 texture = ExtResource( 7 )
 _sections_unfolded = [ "Transform" ]
 
+[node name="Label" type="Label" parent="Credits" index="0"]
+
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_left = -130.0
+margin_top = -140.0
+margin_right = 257.0
+margin_bottom = 193.0
+rect_pivot_offset = Vector2( 0, 0 )
+rect_clip_content = false
+mouse_filter = 2
+mouse_default_cursor_shape = 0
+size_flags_horizontal = 1
+size_flags_vertical = 4
+custom_fonts/font = SubResource( 12 )
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+text = "  Programmer
+    Sky Chan
+	
+Game Designer
+    Sky Chan
+	
+      Tester
+       Toby"
+percent_visible = 1.0
+lines_skipped = 0
+max_lines_visible = -1
+_sections_unfolded = [ "custom_fonts" ]
+
 [node name="DiscardSound" type="AudioStreamPlayer" parent="." index="6"]
 
-stream = ExtResource( 10 )
+stream = ExtResource( 11 )
 volume_db = -15.0
 autoplay = false
 mix_target = 0
-bus = "Master"
+bus = "SE"
 
-[node name="PlayCard" parent="." index="7" instance=ExtResource( 11 )]
+[node name="PlayCard" parent="." index="7" instance=ExtResource( 12 )]
 
 rotation = 0.0
+
+[node name="Music" parent="." index="8" instance=ExtResource( 13 )]
+
+[connection signal="pressed" from="Setting/CheckBox" to="Setting" method="_on_CheckBox_pressed"]
+
+[connection signal="pressed" from="Setting/CheckBox2" to="Setting" method="_on_CheckBox2_pressed"]
 
 
