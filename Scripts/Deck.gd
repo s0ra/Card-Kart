@@ -12,11 +12,11 @@ var P = "protection"
 func _ready():
 	for i in range(15):
 		deck.append(A1)
-	for i in range(15):
+	for i in range(10):
 		deck.append(A2)
 	for i in range(10):
 		deck.append(A3)
-	for i in range(5):
+	for i in range(10):
 		deck.append(OL)
 	for i in range(10):
 		deck.append(B)

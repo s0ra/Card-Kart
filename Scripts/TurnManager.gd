@@ -88,10 +88,10 @@ func next_turn():
 					data.turbo -= item_turbo[rank_card[c]]
 					turbo(c, item_turbo[rank_card[c]], false)
 					yield(TurnAnimation, "animation_finished")
-				if rank_card[c] == A2:
-					data.turbo += 1
-					turbo(c, 1)
-					yield(TurnAnimation, "animation_finished")
+#				if rank_card[c] == A2:
+#					data.turbo += 1
+#					turbo(c, 1)
+#					yield(TurnAnimation, "animation_finished")
 		
 #		print("bomb")
 #		print(bomb)
@@ -156,14 +156,14 @@ func next_turn():
 		turbo(1, 1)
 		ranking.get_node("Rank1").get_data().turbo += 1
 		yield(TurnAnimation, "animation_finished")
-		turbo(2, 1)
-		ranking.get_node("Rank2").get_data().turbo += 1
+		turbo(2, 2)
+		ranking.get_node("Rank2").get_data().turbo += 2
 		yield(TurnAnimation, "animation_finished")
 		turbo(3, 2)
 		ranking.get_node("Rank3").get_data().turbo += 2
 		yield(TurnAnimation, "animation_finished")
-		turbo(4, 2)
-		ranking.get_node("Rank4").get_data().turbo += 2
+		turbo(4, 3)
+		ranking.get_node("Rank4").get_data().turbo += 3
 		yield(TurnAnimation, "animation_finished")
 	turn %= total_players
 	if not end_game:

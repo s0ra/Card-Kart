@@ -72,7 +72,7 @@ func your_turn():
 			play(card)
 			TurnAnimation.play("ShowItem")
 			yield(TurnAnimation, "animation_finished")
-			var i = randi() % 5 + 1
+			var i = randi() % 5
 			if i <= 3:
 				for d in range(i):
 					pre_discard()
@@ -86,8 +86,7 @@ func your_turn():
 			discard(hands[0])
 			yield(TurnAnimation, "animation_finished")
 			yield(game.get_node("CardAnimation"), "animation_finished")
-			
-			var i = randi() % 5 + 1
+			var i = randi() % 5
 			if i <= 2:
 				for d in range(i):
 					pre_discard()
