@@ -18,7 +18,7 @@ _sections_unfolded = [ "Font", "Settings" ]
 custom_solver_bias = 0.0
 extents = Vector2( 50, 75 )
 
-[node name="Accel2" type="Sprite"]
+[node name="Accel3" type="Sprite" index="0"]
 
 texture = ExtResource( 1 )
 script = ExtResource( 2 )
@@ -67,8 +67,8 @@ size_flags_vertical = 4
 custom_fonts/font = SubResource( 1 )
 custom_colors/font_color = Color( 0, 0, 0, 1 )
 text = "Accelerate
-+1 Turbo
-    1 Up"
+   Position
+      1 Up"
 percent_visible = 1.0
 lines_skipped = 0
 max_lines_visible = -1

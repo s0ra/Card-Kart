@@ -88,20 +88,21 @@ func next_turn():
 					data.turbo -= item_turbo[rank_card[c]]
 					turbo(c, item_turbo[rank_card[c]], false)
 					yield(TurnAnimation, "animation_finished")
-				if rank_card[c] == A2 or rank_card[c] == A3:
+				if rank_card[c] == A2:
 					data.turbo += 1
 					turbo(c, 1)
 					yield(TurnAnimation, "animation_finished")
-		# F-Bomb Effect
+		
 #		print("bomb")
 #		print(bomb)
 		for c in range(2,5):
-			if rank_card[c] == A3:
+			if rank_card[c] == A3 and not ranking.get_node("Rank"+str(c-1)).get_data().protection:
 				var r_c = rank_card[c]
 				rank_card[c] = rank_card[c-1]
 				rank_card[c-1] = r_c
 				RankAnimation.play("Car_"+str(c-1)+str(c))
 				yield(RankAnimation, "animation_finished")
+		# F-Bomb Effect
 		if bomb > 0 and not ranking.get_node("Rank1").get_data().protection:
 #			print(bomb)
 			for i in range(bomb):
